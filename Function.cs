@@ -21,6 +21,7 @@ namespace lambdaDemo
         /// <returns></returns>
         public string FunctionHandler(string input, ILambdaContext context)
         {
+            context.Logger.Log($"New Message Received: {input}");
             return input?.ToUpper();
         }
     }
